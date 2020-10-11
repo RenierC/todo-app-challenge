@@ -16,7 +16,6 @@ const db = require("./config/keys").mongoURI;
 const app = express();
 app.use(cors());
 app.use(express.json());
-const PORT = process.env.PORT || 4000;
 
 // connnect to atlas db
 mongoose
@@ -26,6 +25,8 @@ mongoose
   })
   .then(() => console.log("mongo db connected..."))
   .catch((err) => console.log(err));
+
+const PORT = process.env.PORT || 4000;
 
 mongoose.connection.once("open", () => {
   console.log("Connection established successfully");
