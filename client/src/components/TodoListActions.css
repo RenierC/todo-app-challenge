@@ -1,0 +1,37 @@
+.list-actions {
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  text-decoration: none;
+  padding: 10px;
+  display: inline;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+.action-header {
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}

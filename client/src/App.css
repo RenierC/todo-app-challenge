@@ -1,0 +1,24 @@
+.container {
+  margin-top: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  text-decoration: none;
+  padding: 10px;
+  display: inline;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.navbar {
+  margin-bottom: 1rem;
+}

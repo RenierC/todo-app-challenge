@@ -1,0 +1,37 @@
+.todo-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+
+.todo-table thead tr {
+  background-color: #3a86ff;
+  color: #ffffff;
+  text-align: left;
+}
+
+.todo-table th,
+.todo-table td {
+  padding: 1rem;
+}
+.todo-table tbody tr {
+  border-bottom: 1px solid lightgray;
+}
+/* light gray color of even rows */
+.todo-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+/* end of the table color */
+.todo-table tbody tr:last-of-type {
+  border-bottom: 2px solid #3a86ff;
+}
+
+.todo-text-completed {
+  text-decoration: line-through;
+  color: rgb(136, 133, 133);
+}
+
+.empty-list {
+  width: 200px;
+}

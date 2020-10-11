@@ -1,0 +1,42 @@
+input[type="text"] {
+  font-weight: bold;
+  border-color: lightgrey;
+  border-radius: 20px;
+  height: 30px;
+  text-align: center;
+  border-style: solid;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3a86ff;
+}
+
+input[type="text"]:hover {
+  border-color: #3a86ff;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.form-btn {
+  margin: 1rem;
+  text-align: center;
+}
+
+.form-btn > button {
+  border-radius: 20px;
+  border-style: none;
+  width: 100px;
+  height: 30px;
+  background: #3a86ff;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.form-btn > button:hover {
+  background: #00509d;
+}
