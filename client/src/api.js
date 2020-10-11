@@ -1,8 +1,9 @@
 // Interface to talk to the server
-export const getTodos = () => fetch("/").then((res) => res.json());
+export const getTodos = () =>
+  fetch("https://todo-app-challenge.herokuapp.com/").then((res) => res.json());
 
 export const createTodo = (todo) =>
-  fetch("/create", {
+  fetch("https://todo-app-challenge.herokuapp.com/create", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -11,10 +12,13 @@ export const createTodo = (todo) =>
     body: JSON.stringify(todo),
   });
 
-export const getSingleTodo = (id) => fetch(`/${id}`).then((res) => res.json());
+export const getSingleTodo = (id) =>
+  fetch(`https://todo-app-challenge.herokuapp.com/${id}`).then((res) =>
+    res.json()
+  );
 
 export const updateTodo = (todo, id) =>
-  fetch(`/${id}`, {
+  fetch(`https://todo-app-challenge.herokuapp.com/${id}`, {
     method: "POST",
     headers: {
       Accept: "application/json",
