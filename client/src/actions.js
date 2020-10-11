@@ -1,9 +1,8 @@
 // Interface to talk to the server
-export const getTodos = () =>
-  fetch("https://todo-app-challenge.herokuapp.com/").then((res) => res.json());
+export const getTodos = () => fetch("/api/items/").then((res) => res.json());
 
 export const createTodo = (todo) =>
-  fetch("https://todo-app-challenge.herokuapp.com/create", {
+  fetch("/api/items/create", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -13,12 +12,10 @@ export const createTodo = (todo) =>
   });
 
 export const getSingleTodo = (id) =>
-  fetch(`https://todo-app-challenge.herokuapp.com/${id}`).then((res) =>
-    res.json()
-  );
+  fetch(`/api/items/${id}`).then((res) => res.json());
 
 export const updateTodo = (todo, id) =>
-  fetch(`https://todo-app-challenge.herokuapp.com/${id}`, {
+  fetch(`/api/items/${id}`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -28,6 +25,6 @@ export const updateTodo = (todo, id) =>
   });
 
 export const deleteTodo = (id) =>
-  fetch(`http://localhost:4000/${id}`, {
+  fetch(`/api/items/${id}`, {
     method: "DELETE",
   });

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { deleteTodo, updateTodo } from "../api";
+import { deleteTodo, updateTodo } from "../actions";
 
 import "./TodoListActions.css";
 import editIcon from "../assets/edit-icon.svg";

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TodoTemplate from "./TodoTemplate";
-import { getSingleTodo, updateTodo } from "../api";
+import { getSingleTodo, updateTodo } from "../actions";
 import { useHistory, useRouteMatch } from "react-router-dom";
 
 function EditTodo() {

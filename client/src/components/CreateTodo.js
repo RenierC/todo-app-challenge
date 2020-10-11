@@ -1,6 +1,6 @@
 import React from "react";
 import TodoTemplate from "./TodoTemplate";
-import { createTodo } from "../api";
+import { createTodo } from "../actions";
 import { useHistory } from "react-router-dom";
 
 function CreateTodo() {

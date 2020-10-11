@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getTodos } from "../api";
+import { getTodos } from "../actions";
 import TodoListActions from "./TodoListActions";
 
 import "./TodoList.css";
