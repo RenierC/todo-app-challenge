@@ -3,22 +3,16 @@ const mongoose = require("mongoose");
 const path = require("path");
 const bodyParser = require("body-parser");
 const items = require("./routes/api/items");
-// Connect to local db
-// mongoose.connect("mongodb://127.0.0.1:27017/todos", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
 
-// mongo DB atlas
 // DB config
 const db = require("./config/keys").mongoURI;
 const app = express();
-// app.use(cors());
+
 app.use(bodyParser.json());
 
-// connnect to atlas db
+// connnect to Db
 mongoose
-  .connect(process.env.MONGODB_URI || db, {
+  .connect(process.env.MONGODB_URI || db || "mongodb://127.0.0.1:27017/todos", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -40,6 +34,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
