@@ -13,9 +13,14 @@ const path = require("path");
 // mongo DB atlas
 // DB config
 const db = require("./config/keys").mongoURI;
+const app = express();
+app.use(cors());
+app.use(express.json());
+const PORT = process.env.PORT || 4000;
+
 // connnect to atlas db
 mongoose
-  .connect(db, {
+  .connect(process.env.MONGODB_URI || db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -25,11 +30,9 @@ mongoose
 mongoose.connection.once("open", () => {
   console.log("Connection established successfully");
 });
-const app = express();
 
 // middlewares
-app.use(cors());
-app.use(express.json());
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
   //set static folder
@@ -42,7 +45,6 @@ if (process.env.NODE_ENV === "production") {
 
 // set the port
 // const PORT = 4000;
-const port = process.env.PORT || 4000;
 
 // Routes
 // Get all
@@ -108,8 +110,8 @@ app.delete("/:id", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`the server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`the server is running on port ${PORT}`);
 });
 // app.listen(PORT, () => {
 //   console.log("the server is running on port " + PORT);
