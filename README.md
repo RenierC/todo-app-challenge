@@ -41,9 +41,11 @@ mongoose
 ---
 
 _If the above fail or you want to run the server and client independently_
+
 To install server, go to the root of the folder and run
 
 `npm install`
+
 Then cd into client and run
 
 `npm install`
