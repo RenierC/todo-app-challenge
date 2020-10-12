@@ -31,13 +31,10 @@ mongoose
 
 **Navigate to the root of the folder**
 
-1. Install server dependencies
-`npm install`
-
-2. Install client dependencies
+1. Install client dependencies
 `npm run client-install`
 
-3. To run both the client and the server simultaneously
+2. To run both the client and the server simultaneously
 `npm run dev`
 
 ---
